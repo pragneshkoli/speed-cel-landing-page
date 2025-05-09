@@ -13,7 +13,7 @@ class TrackingService {
     await Future.delayed(const Duration(seconds: 1));
 
     // Get package from sample data
-    final package = SamplePackages.getPackageByTrackingId(trackingId);
+    final package = await SamplePackages.getPackageByTrackingId(trackingId);
 
     // If package exists, save to recent tracks
     if (package != null) {
